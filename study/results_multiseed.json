@@ -1,0 +1,510 @@
+{
+  "config": {
+    "split_seeds": [
+      7,
+      42,
+      101
+    ],
+    "model_seed": 42,
+    "test_size": 0.2,
+    "threshold": 0.5,
+    "same_fitted_model_both_test_sets": true,
+    "features": "41 predictors; label and difficulty excluded",
+    "file_sha256": {
+      "KDDTrain.txt": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95",
+      "KDDTest.txt": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84"
+    },
+    "python": "3.13.18",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "dataset": {
+    "train_records": 125973,
+    "test_records": 22544,
+    "exact_feature_overlap": 664,
+    "test_no_overlap": 21880
+  },
+  "runs": [
+    {
+      "split_seed": 7,
+      "model": "Logistic regression",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13261,
+        "fp": 208,
+        "fn": 208,
+        "tp": 11518,
+        "accuracy": 0.983488787457829,
+        "precision": 0.9822616407982262,
+        "recall": 0.9822616407982262,
+        "f1": 0.9822616407982262,
+        "fpr": 0.015442868809859678,
+        "roc_auc": 0.9976677102398498,
+        "average_precision": 0.9972086550763118,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11518,
+          "recall": 0.9822616407982262
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 8968,
+        "fp": 743,
+        "fn": 5065,
+        "tp": 7768,
+        "accuracy": 0.7423704755145494,
+        "precision": 0.9127012101985665,
+        "recall": 0.6053144237512663,
+        "f1": 0.7278860569715142,
+        "fpr": 0.07651117289671507,
+        "roc_auc": 0.7981356439951984,
+        "average_precision": 0.8610726471224036,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6865,
+          "recall": 0.7558075525707365
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 903,
+          "recall": 0.2408
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 8884,
+        "fp": 722,
+        "fn": 5036,
+        "tp": 7238,
+        "accuracy": 0.7368372943327239,
+        "precision": 0.9092964824120603,
+        "recall": 0.5897018087013198,
+        "f1": 0.715429475140852,
+        "fpr": 0.07516135748490527,
+        "roc_auc": 0.7925132152379778,
+        "average_precision": 0.8563341204408679,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6343,
+          "recall": 0.7410912489776843
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 895,
+          "recall": 0.24091520861372812
+        }
+      }
+    },
+    {
+      "split_seed": 7,
+      "model": "Random forest",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13461,
+        "fp": 8,
+        "fn": 34,
+        "tp": 11692,
+        "accuracy": 0.998333002579877,
+        "precision": 0.9993162393162394,
+        "recall": 0.9971004605150947,
+        "f1": 0.9982071202936907,
+        "fpr": 0.0005939564926869107,
+        "roc_auc": 0.9999798337942477,
+        "average_precision": 0.9999773230357591,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11692,
+          "recall": 0.9971004605150947
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 9446,
+        "fp": 265,
+        "fn": 4842,
+        "tp": 7991,
+        "accuracy": 0.7734652235628106,
+        "precision": 0.9679021317829457,
+        "recall": 0.62269149848048,
+        "f1": 0.7578358385888377,
+        "fpr": 0.027288641746473073,
+        "roc_auc": 0.9640051433277481,
+        "average_precision": 0.9685353657717196,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6996,
+          "recall": 0.7702301001871629
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 995,
+          "recall": 0.2653333333333333
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 9359,
+        "fp": 247,
+        "fn": 4813,
+        "tp": 7461,
+        "accuracy": 0.7687385740402194,
+        "precision": 0.9679553710430722,
+        "recall": 0.6078702949323774,
+        "f1": 0.7467720948853969,
+        "fpr": 0.02571309598167812,
+        "roc_auc": 0.9639606848430066,
+        "average_precision": 0.9675065452317755,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6473,
+          "recall": 0.756279939245239
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 988,
+          "recall": 0.26594885598923285
+        }
+      }
+    },
+    {
+      "split_seed": 42,
+      "model": "Logistic regression",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13304,
+        "fp": 165,
+        "fn": 232,
+        "tp": 11494,
+        "accuracy": 0.9842429053383608,
+        "precision": 0.9858478428681705,
+        "recall": 0.9802149070441754,
+        "f1": 0.9830233055377379,
+        "fpr": 0.012250352661667532,
+        "roc_auc": 0.9978590960801239,
+        "average_precision": 0.9979923078233724,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11494,
+          "recall": 0.9802149070441754
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 8970,
+        "fp": 741,
+        "fn": 5023,
+        "tp": 7810,
+        "accuracy": 0.7443222143364088,
+        "precision": 0.9133434686001637,
+        "recall": 0.6085872360321047,
+        "f1": 0.7304526748971193,
+        "fpr": 0.07630522088353414,
+        "roc_auc": 0.7973490366567703,
+        "average_precision": 0.8606007557754867,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6853,
+          "recall": 0.7544864031707585
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 957,
+          "recall": 0.2552
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 8886,
+        "fp": 720,
+        "fn": 4992,
+        "tp": 7282,
+        "accuracy": 0.7389396709323584,
+        "precision": 0.9100224943764059,
+        "recall": 0.5932866221280756,
+        "f1": 0.7182876306963898,
+        "fpr": 0.07495315427857589,
+        "roc_auc": 0.791671980309683,
+        "average_precision": 0.8558492233213749,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6333,
+          "recall": 0.7399228881878724
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 949,
+          "recall": 0.2554508748317631
+        }
+      }
+    },
+    {
+      "split_seed": 42,
+      "model": "Random forest",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13464,
+        "fp": 5,
+        "fn": 26,
+        "tp": 11700,
+        "accuracy": 0.9987695971422902,
+        "precision": 0.9995728321230244,
+        "recall": 0.9977827050997783,
+        "f1": 0.9986769664120183,
+        "fpr": 0.0003712228079293192,
+        "roc_auc": 0.9999914143249607,
+        "average_precision": 0.9999903105777889,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11700,
+          "recall": 0.9977827050997783
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 9454,
+        "fp": 257,
+        "fn": 4796,
+        "tp": 8037,
+        "accuracy": 0.7758605393896381,
+        "precision": 0.9690137448758138,
+        "recall": 0.6262760071690173,
+        "f1": 0.760827377289724,
+        "fpr": 0.026464833693749357,
+        "roc_auc": 0.9638470844257131,
+        "average_precision": 0.9684546082274598,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6976,
+          "recall": 0.7680281845205329
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 1061,
+          "recall": 0.2829333333333333
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 9367,
+        "fp": 239,
+        "fn": 4767,
+        "tp": 7507,
+        "accuracy": 0.7712065813528336,
+        "precision": 0.969145365349858,
+        "recall": 0.6116180544239856,
+        "f1": 0.74995004995005,
+        "fpr": 0.024880283156360608,
+        "roc_auc": 0.9636495165509336,
+        "average_precision": 0.9671447519786711,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6453,
+          "recall": 0.7539432176656151
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 1054,
+          "recall": 0.28371467025572006
+        }
+      }
+    },
+    {
+      "split_seed": 101,
+      "model": "Logistic regression",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13293,
+        "fp": 176,
+        "fn": 206,
+        "tp": 11520,
+        "accuracy": 0.9848382615598333,
+        "precision": 0.9849521203830369,
+        "recall": 0.9824322019443971,
+        "f1": 0.9836905473486466,
+        "fpr": 0.013067042839112034,
+        "roc_auc": 0.998166027631159,
+        "average_precision": 0.9969927468706491,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11520,
+          "recall": 0.9824322019443971
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 8967,
+        "fp": 744,
+        "fn": 5032,
+        "tp": 7801,
+        "accuracy": 0.7437899219304471,
+        "precision": 0.9129315389116442,
+        "recall": 0.6078859191147822,
+        "f1": 0.7298156983815137,
+        "fpr": 0.07661414890330553,
+        "roc_auc": 0.7948761841709147,
+        "average_precision": 0.8614415147246328,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6858,
+          "recall": 0.755036882087416
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 943,
+          "recall": 0.25146666666666667
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 8883,
+        "fp": 723,
+        "fn": 5003,
+        "tp": 7271,
+        "accuracy": 0.7382998171846435,
+        "precision": 0.9095571678759069,
+        "recall": 0.5923904187713867,
+        "f1": 0.7174856917308072,
+        "fpr": 0.07526545908806996,
+        "roc_auc": 0.7890293483063228,
+        "average_precision": 0.8566084315771016,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6336,
+          "recall": 0.7402733964248159
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 935,
+          "recall": 0.25168236877523553
+        }
+      }
+    },
+    {
+      "split_seed": 101,
+      "model": "Random forest",
+      "training_size": 100778,
+      "holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13460,
+        "fp": 9,
+        "fn": 26,
+        "tp": 11700,
+        "accuracy": 0.9986108354832308,
+        "precision": 0.9992313604919293,
+        "recall": 0.9977827050997783,
+        "f1": 0.9985065073607852,
+        "fpr": 0.0006682010542727745,
+        "roc_auc": 0.9999886853972749,
+        "average_precision": 0.9999871896908376,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11700,
+          "recall": 0.9977827050997783
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 9455,
+        "fp": 256,
+        "fn": 4763,
+        "tp": 8070,
+        "accuracy": 0.7773687012065295,
+        "precision": 0.9692529425894787,
+        "recall": 0.6288475025325333,
+        "f1": 0.762795973344676,
+        "fpr": 0.02636185768715889,
+        "roc_auc": 0.9655204425267301,
+        "average_precision": 0.9695921714747723,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 7078,
+          "recall": 0.7792579544203457
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 992,
+          "recall": 0.26453333333333334
+        }
+      },
+      "official_no_fulltrain_feature_match": {
+        "n": 21880,
+        "attacks": 12274,
+        "tn": 9368,
+        "fp": 238,
+        "fn": 4734,
+        "tp": 7540,
+        "accuracy": 0.7727605118829982,
+        "precision": 0.9694008742607354,
+        "recall": 0.6143066644940525,
+        "f1": 0.7520446838220627,
+        "fpr": 0.02477618155319592,
+        "roc_auc": 0.9653344672384605,
+        "average_precision": 0.9683169110276102,
+        "seen_attacks": {
+          "n": 8559,
+          "detected": 6555,
+          "recall": 0.7658604977216965
+        },
+        "unseen_attacks": {
+          "n": 3715,
+          "detected": 985,
+          "recall": 0.2651413189771198
+        }
+      }
+    }
+  ]
+}

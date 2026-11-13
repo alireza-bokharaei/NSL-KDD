@@ -1,0 +1,154 @@
+{
+  "dataset": {
+    "train_rows": 125973,
+    "test_rows": 22544,
+    "train_normal": 67343,
+    "train_attack": 58630,
+    "test_normal": 9711,
+    "test_attack": 12833,
+    "unseen_test_attack_labels": [
+      "apache2",
+      "httptunnel",
+      "mailbomb",
+      "mscan",
+      "named",
+      "processtable",
+      "ps",
+      "saint",
+      "sendmail",
+      "snmpgetattack",
+      "snmpguess",
+      "sqlattack",
+      "udpstorm",
+      "worm",
+      "xlock",
+      "xsnoop",
+      "xterm"
+    ],
+    "test_rows_exact_41_feature_overlap": 664,
+    "test_rows_overlap_same_binary_label": 617
+  },
+  "config": {
+    "seed": 42,
+    "threshold": 0.5,
+    "holdout": "80/20 stratified on KDDTrain+; no test-set model tuning",
+    "formal": "train full KDDTrain+, evaluate full KDDTest+",
+    "features": "41 predictors; exclude label and difficulty",
+    "hashes": {
+      "KDDTest.txt": "fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84",
+      "KDDTrain.txt": "1b86d2f957b33082081bba410fe129b475efebcc13c9014c3f447c8271aadf95"
+    },
+    "python": "3.13.16",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5"
+  },
+  "models": {
+    "Logistic regression": {
+      "random_holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13304,
+        "fp": 165,
+        "fn": 232,
+        "tp": 11494,
+        "accuracy": 0.9842429053383608,
+        "precision": 0.9858478428681705,
+        "recall": 0.9802149070441754,
+        "f1": 0.9830233055377379,
+        "fpr": 0.012250352661667532,
+        "roc_auc": 0.9978590960801239,
+        "average_precision": 0.9979923078233724,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11494,
+          "recall": 0.9802149070441754
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official_test": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 8970,
+        "fp": 741,
+        "fn": 5014,
+        "tp": 7819,
+        "accuracy": 0.7447214336408801,
+        "precision": 0.9134345794392523,
+        "recall": 0.6092885529494273,
+        "f1": 0.7309867713738138,
+        "fpr": 0.07630522088353414,
+        "roc_auc": 0.7940298197748165,
+        "average_precision": 0.859571750248909,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6860,
+          "recall": 0.755257073654079
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 959,
+          "recall": 0.2557333333333333
+        }
+      },
+      "seconds": 7.1
+    },
+    "Random forest": {
+      "random_holdout": {
+        "n": 25195,
+        "attacks": 11726,
+        "tn": 13464,
+        "fp": 5,
+        "fn": 26,
+        "tp": 11700,
+        "accuracy": 0.9987695971422902,
+        "precision": 0.9995728321230244,
+        "recall": 0.9977827050997783,
+        "f1": 0.9986769664120183,
+        "fpr": 0.0003712228079293192,
+        "roc_auc": 0.9999914143249607,
+        "average_precision": 0.9999903105777889,
+        "seen_attacks": {
+          "n": 11726,
+          "detected": 11700,
+          "recall": 0.9977827050997783
+        },
+        "unseen_attacks": {
+          "n": 0,
+          "detected": 0,
+          "recall": null
+        }
+      },
+      "official_test": {
+        "n": 22544,
+        "attacks": 12833,
+        "tn": 9448,
+        "fp": 263,
+        "fn": 4730,
+        "tp": 8103,
+        "accuracy": 0.7785220014194464,
+        "precision": 0.9685632321300502,
+        "recall": 0.6314189978960493,
+        "f1": 0.7644700221708571,
+        "fpr": 0.027082689733292142,
+        "roc_auc": 0.966937411796252,
+        "average_precision": 0.9693109879873014,
+        "seen_attacks": {
+          "n": 9083,
+          "detected": 6993,
+          "recall": 0.7698998128371684
+        },
+        "unseen_attacks": {
+          "n": 3750,
+          "detected": 1110,
+          "recall": 0.296
+        }
+      },
+      "seconds": 7.37
+    }
+  }
+}
