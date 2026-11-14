@@ -18,7 +18,7 @@ SHA-256:
 - `KDDTest.txt`: `fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84`
 
 ### Main experiment
-Python 3.13.18; numpy 2.3.5; pandas 2.2.3; scikit-learn 1.6.1. Install `requirements.txt`, then run `python run_multiseed.py` from the folder. Results overwrite `results_multiseed.json`.
+Python 3.13; numpy 2.3; pandas 2.2; scikit-learn 1.6, Install `requirements.txt`, then run `python run_multiseed.py` from the folder. Results overwrite `results_multiseed.json`.
 
 Splits are stratified 80/20 from KDDTrain+ with seeds 7, 42, and 101. Each fitted model is evaluated on its corresponding holdout and on the same fixed KDDTest+, so both evaluations use an identical model for each seed. All preprocessing is fit on the corresponding training subset. There is no tuning on KDDTest+; this multi-seed analysis followed an earlier exploratory single-seed analysis and was not preregistered.
 
@@ -47,7 +47,7 @@ SHA-256:
 - `KDDTest.txt`: `fa46b0935342616aa83b7c2578db355b6a7aaabbc492248172c7a1e8b7ab8f84`
 
 ### آزمایش اصلی
-Python 3.13.18؛ numpy 2.3.5؛ pandas 2.2.3؛ scikit-learn 1.6.1. ابتدا `requirements.txt` را نصب کنید، سپس از داخل پوشه دستور `python run_multiseed.py` را اجرا کنید. نتایج فایل `results_multiseed.json` را بازنویسی می‌کنند.
+Python 3.13؛ numpy 2.3؛ pandas 2.2؛ scikit-learn 1.6. ابتدا `requirements.txt` را نصب کنید، سپس از داخل پوشه دستور `python run_multiseed.py` را اجرا کنید. نتایج فایل `results_multiseed.json` را بازنویسی می‌کنند.
 
 تقسیم‌بندی‌ها به‌صورت طبقه‌بندی‌شده (stratified) با نسبت ۸۰/۲۰ از KDDTrain+ و با بذرهای ۷، ۴۲ و ۱۰۱ انجام شده‌اند. هر مدلِ برازش‌شده روی holdout متناظر خود و همچنین روی همان KDDTest+ ثابت ارزیابی می‌شود؛ بنابراین هر دو ارزیابی برای هر بذر از یک مدل یکسان استفاده می‌کنند. تمام پیش‌پردازش‌ها روی زیرمجموعهٔ آموزش متناظر برازش شده‌اند. هیچ تنظیم hyperparameter روی KDDTest+ انجام نشده است؛ این تحلیل چندبذری پس از یک تحلیل اکتشافی قبلی تک‌بذری انجام شده و از پیش ثبت (preregistered) نشده بود.
 
